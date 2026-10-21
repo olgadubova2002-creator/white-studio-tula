@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WHITE · студия-мастерская в Туле: рисуем, лепим, снимаем мультфильмы</title>
+<meta name="description" content="Студия-мастерская WHITE в Туле, Красноармейский пр., 3: рисование, живопись, лепка, керамика и анимация для детей от 4 лет, подростков и взрослых.">
+<meta property="og:title" content="WHITE · студия-мастерская в Туле">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<link rel="stylesheet" href="site.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%235b2ec9%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27%2362d6e0%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800&family=Literata:wght@500;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["LocalBusiness","EducationalOrganization"],"name":"WHITE, студия-мастерская","telephone":"+79807207010","address":{"@type":"PostalAddress","streetAddress":"Красноармейский пр., 3, офис 214","addressLocality":"Тула","addressCountry":"RU"},"areaServed":"Тула","sameAs":["https://yandex.ru/maps/org/white/205704090223/","https://t.me/studiawhite"]}
+</script>
+<style>
+  :root {
+    --bg: #f8f7f5; --surface: #eeeaf8; --tint: #dff2f4; --clay: #eadfd2; --ink: #1d1a2f; --muted: #4d4967; --r: 20px;
+    --accent: #5b2ec9; --accent-ink: #ffffff;
+    --indigo: #2b2a86; --cyan: #8fe3ea; --night: #14122b;
+    --font: "Onest", "Segoe UI", system-ui, sans-serif;
+    --serif: "Literata", "Georgia", "Times New Roman", serif;
+    --m: clamp(16px, 2.2vw, 32px);
+    --gap: clamp(80px, 9vw, 150px);
+    --t-xl: clamp(2.6rem, 9.4vw, 9rem);
+    --t-l: clamp(2.2rem, 6.4vw, 6rem);
+    --t-m: clamp(1.5rem, 2.6vw, 2.4rem);
+    --t-s: 1.0625rem;
+    --t-xs: 0.875rem;
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 var(--t-s)/1.55 var(--font); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  h1, h2, h3, p, ul, dl, dd, figure, blockquote { margin: 0; padding: 0; }
+  ul { list-style: none; }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  ::selection { background: var(--cyan); color: var(--ink); }
+  .display { font-family: var(--serif); font-weight: 600; letter-spacing: -.015em; line-height: 1.04; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.6em; background: var(--accent); color: var(--accent-ink); font: 700 1.0625rem/1 var(--font); text-decoration: none; border-radius: 999px; border: 0; cursor: pointer; transition: transform .18s var(--ease), background-color .18s var(--ease); }
+  .btn:hover { background: var(--indigo); transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+  .btn--sm { min-height: 44px; padding: 0 1.15em; font-size: .9375rem; }
+  .btn--light { background: var(--bg); color: var(--ink); }
+  .btn--light:hover { background: var(--cyan); }
+  .btn--cyan { background: var(--cyan); color: var(--ink); }
+  .btn--cyan:hover { background: var(--bg); }
+  .btn--ink { background: var(--night); color: #fff; }
+  .btn--ink:hover { background: var(--indigo); }
+  .link { text-decoration: underline; text-underline-offset: .22em; text-decoration-thickness: .08em; }
+
+  /* ---- плавное появление частей секций (без скрипта всё видно) ---- */
+  .js .rise { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
+  .js .rise.in { opacity: 1; transform: none; }
+
+  /* ---- шапка ---- */
+  .bar { position: fixed; z-index: 20; inset: 0 0 auto 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px var(--m); background: var(--bg); transition: transform .35s var(--ease); }
+  .bar.hide { transform: translateY(-100%); }
+  .bar__mark { font-family: var(--font); font-weight: 800; font-size: 1.25rem; letter-spacing: -.02em; text-decoration: none; }
+  .bar nav { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 36px); font-size: .9375rem; }
+  .bar nav a:not(.btn) { text-decoration: none; padding: 12px 0; }
+  .bar nav a:not(.btn):hover { color: var(--accent); }
+  @media (max-width: 720px) { .bar nav a:not(.btn) { display: none; } }
+
+  /* ---- 1 · первый экран: предложение разрезано рамкой, рамка едет по ленте ---- */
+  .hero { height: 150vh; position: relative; }
+  .hero__stage { position: sticky; top: 0; height: 100svh; overflow: hidden; background: var(--bg); --fw: 42vw; --fh: calc(var(--fw) * 9 / 16); --step: calc(var(--fh) + 24px); }
+  .hero__row { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+  .hero__row h1 { position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; align-content: center; padding: 0 var(--m); margin: 0; pointer-events: auto; }
+  .hero__half { font-family: var(--serif); font-size: clamp(40px, 6.8vw, 112px); font-weight: 600; letter-spacing: -.02em; line-height: 1; white-space: nowrap; }
+  .hero__reel { position: absolute; left: 50%; top: calc(50% - var(--fh) / 2); width: var(--fw); transform: translateX(-50%) translateY(calc(var(--step) * -1 * var(--p, 0) * 3)); display: grid; gap: 24px; will-change: transform; }
+  .hero__reel img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r); }
+  .hero__splash { position: absolute; z-index: 0; left: 50%; top: 50%; width: 60vw; max-width: none; transform: translate(-50%, -46%) rotate(-6deg); mix-blend-mode: multiply; opacity: .62; pointer-events: none; }
+  .hero__lede { position: absolute; left: var(--m); bottom: 32px; width: min(26rem, 24vw); font-size: 1.125rem; line-height: 1.5; z-index: 3; padding-top: 8px; }
+  .hero__cta { position: absolute; right: var(--m); bottom: 32px; z-index: 3; }
+  .hero__top, .hero__bot { position: absolute; left: 0; right: 0; height: 15vh; background: var(--bg); z-index: 1; opacity: .0; pointer-events: none; }
+  @media (min-width: 861px) {
+    .hero__half--a { align-self: flex-start; margin-top: 21svh; position: relative; z-index: 3; }
+    .hero__half--b { align-self: flex-end; margin-bottom: 21svh; position: relative; z-index: 3; }
+    .hero__lede { bottom: 28px; }
+  }
+  @media (max-width: 860px) {
+    .hero__stage { --lift: 56px; --fw: min(calc(100vw - 2 * var(--m)), calc(46svh * 4 / 3)); --fh: calc(var(--fw) * 3 / 4); }
+    .hero__row h1 { flex-direction: column; align-items: stretch; justify-content: center; padding-top: 0; padding-bottom: calc(var(--lift) * 2); gap: calc(var(--fh) + 40px); }
+    .hero__half { font-size: 11vw; }
+    .hero__splash { width: 120vw; top: 46%; opacity: .6; }
+    .hero__reel { display: block; height: var(--fh); transform: translateX(-50%); }
+    .hero__reel img { position: absolute; inset: 0; height: 100%; aspect-ratio: 4 / 3; opacity: 0; transition: opacity .5s var(--ease); }
+    .hero__reel[data-i="0"] img:nth-child(1), .hero__reel[data-i="1"] img:nth-child(2), .hero__reel[data-i="2"] img:nth-child(3), .hero__reel[data-i="3"] img:nth-child(4) { opacity: 1; }
+    .hero__half--b { text-align: right; }
+    .hero__reel { top: calc(50% - var(--fh) / 2 - var(--lift)); }
+    .hero__lede { position: static; width: auto; }
+    .hero__cta { position: static; }
+    .hero__foot { position: absolute; left: var(--m); right: var(--m); bottom: 20px; display: grid; gap: 14px; z-index: 3; }
+    .hero__foot .btn { width: 100%; }
+  }
+  @media (min-width: 861px) { .hero__foot { display: contents; } }
+
+  /* ---- 2 · о студии: абзац крупно, портрет как буквица ---- */
+  .about { padding: var(--gap) var(--m); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--m); row-gap: 40px; }
+  .about__facts { grid-column: 1 / 3; font-size: var(--t-xs); line-height: 1.5; display: grid; gap: 14px; align-content: start; }
+  .about__facts b { display: block; font-size: 1rem; }
+  .about__main { grid-column: 3 / 13; }
+  .about h2 { font-size: clamp(1.75rem, 3vw, 2.75rem); margin-bottom: 28px; }
+  .about__lead { font-size: clamp(1.5rem, 2.5vw, 2.4rem); line-height: 1.2; letter-spacing: -.015em; }
+  .about__lead img { float: left; width: 3.6em; height: 3.6em; object-fit: cover; margin: .12em .5em .1em 0; border-radius: 16px; }
+  .about__lead b { font-weight: 700; }
+  .about__more { margin-top: 1.1em; color: var(--muted); font-size: clamp(1.25rem, 2vw, 1.9rem); line-height: 1.25; max-width: 40em; }
+  @media (max-width: 860px) {
+    .about { grid-template-columns: 1fr; }
+    .about__facts, .about__main { grid-column: 1; }
+    .about__facts { grid-template-columns: repeat(3, 1fr); order: 2; }
+    .about__lead { font-size: 1.375rem; line-height: 1.25; }
+    .about__lead img { width: 110px; height: 110px; }
+  }
+
+  /* ---- 3 · три дистанции одной рамки (закреплённая сцена) ---- */
+  .dist { height: 210vh; position: relative; background: var(--surface); }
+  .dist__stage { position: sticky; top: 0; height: 100svh; background: var(--surface); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--m); align-items: center; padding: 72px var(--m) 24px; overflow: hidden; }
+  .dist__splash { position: absolute; z-index: 0; left: 4vw; top: 50%; width: 48vw; max-width: none; transform: translateY(-50%) rotate(8deg); mix-blend-mode: multiply; pointer-events: none; }
+  .dist__frame { grid-column: 2 / 7; justify-self: center; position: relative; z-index: 1; width: min(100%, 53svh); aspect-ratio: 4 / 5; overflow: hidden; background: var(--indigo); border-radius: var(--r); }
+  .dist__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: var(--ox, 50%) var(--oy, 50%); transform: scale(var(--s, 1)); transition: transform .8s var(--ease); }
+  .dist__text { position: relative; z-index: 1; grid-column: 7 / 13; display: grid; gap: 40px; padding-left: 2vw; }
+  .dist h2 { font-size: clamp(2.2rem, 4.8vw, 5rem); }
+  .dist__cap { display: grid; gap: 26px; max-width: 30em; }
+  .dist__cap p { color: var(--muted); font-size: 1.125rem; transition: color .4s var(--ease); }
+  .dist__cap p[data-on] { color: var(--ink); }
+  .dist__cap b { display: block; font-size: 1.5rem; margin-bottom: 4px; }
+  @media (max-width: 860px) {
+    .dist__stage { grid-template-columns: 1fr; align-content: center; justify-items: center; gap: 22px; padding-top: 72px; }
+    .dist__frame { grid-column: 1; width: min(66vw, 40svh * .8); }
+    .dist__text { grid-column: 1; padding-left: 0; text-align: center; gap: 14px; justify-items: center; order: -1; }
+    .dist h2 { font-size: 10.5vw; }
+    .dist__splash { width: 90vw; left: 5vw; top: 74%; opacity: .45; }
+    .dist__cap { position: relative; width: 100%; min-height: 6.5em; }
+    .dist__cap p { position: absolute; left: 0; right: 0; opacity: 0; color: var(--ink); transition: opacity .5s var(--ease); }
+    .dist__cap p[data-on] { opacity: 1; }
+  }
+
+  /* ---- 4 · один глагол за раз: панели друг на друге ---- */
+  .verbs { position: relative; }
+  .verb { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); column-gap: clamp(24px, 4vw, 72px); align-items: center; padding: clamp(48px, 6vw, 96px) var(--m); }
+  .verb--1 { background: var(--surface); color: var(--ink); }
+  .verb--2 { background: var(--clay); color: var(--ink); }
+  .verb--3 { background: var(--tint); color: var(--ink); }
+  .verb--4 { background: var(--indigo); color: #fff; }
+  .verb__copy { grid-column: 1; grid-row: 1; }
+  .verb h2 { font-size: clamp(3rem, 6.6vw, 7.6rem); }
+  .verb p { margin-top: 28px; font-size: 1.5rem; line-height: 1.4; max-width: 24em; }
+  .verb figure { grid-column: 2; grid-row: 1; margin: 0; position: relative; aspect-ratio: 4 / 5; max-height: 76svh; width: 100%; justify-self: center; border-radius: calc(var(--r) + 4px); overflow: hidden; }
+  .verb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .verb:nth-child(even) .verb__copy { grid-column: 2; }
+  .verb:nth-child(even) figure { grid-column: 1; }
+  @media (max-width: 860px) {
+    .verb { grid-template-columns: 1fr; row-gap: 28px; padding: 56px var(--m); }
+    .verb__copy, .verb figure, .verb:nth-child(even) .verb__copy, .verb:nth-child(even) figure { grid-column: 1; grid-row: auto; }
+    .verb h2 { font-size: 14vw; }
+    .verb p { font-size: 1.125rem; margin-top: 16px; }
+    .verb figure { aspect-ratio: 4 / 3; max-height: none; }
+  }
+
+  /* ---- 5 · цена одним предложением ---- */
+  .price { background: var(--surface); padding: var(--gap) var(--m); }
+  .price h2 { font-size: clamp(2.2rem, 6.4vw, 6.8rem); }
+  .price h2 .tag { background: var(--accent); color: #fff; padding: .02em .22em .06em; display: inline-block; line-height: 1.02; border-radius: .22em; }
+  .price__row { margin-top: 56px; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--m); align-items: center; row-gap: 32px; }
+  .price__txt { grid-column: 1 / 6; display: grid; gap: 32px; justify-items: start; }
+  .price__txt p { font-size: 1.375rem; }
+  .price__row figure { grid-column: 7 / 13; margin: 0; }
+  .price__row figure img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r); }
+  .list { margin-top: 72px; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--m); row-gap: 28px; }
+  .list div { grid-column: span 3; background: var(--bg); padding: 28px 24px 32px; border-radius: 16px; }
+  .list dt { font-size: 1.25rem; font-weight: 700; }
+  .list dd { margin-top: 6px; color: var(--muted); }
+  .list dd b { display: block; margin-top: 14px; font-family: var(--serif); font-weight: 600; font-size: 1.875rem; color: var(--ink); }
+  @media (max-width: 860px) {
+    .price h2 { font-size: 8.6vw; }
+    .price__row { grid-template-columns: 1fr; }
+    .price__txt, .price__row figure { grid-column: 1; }
+    .price__txt .btn { justify-self: stretch; }
+    .list div { grid-column: span 12; }
+  }
+
+  /* ---- 6 · отзыв по краям ---- */
+  .quote { padding: var(--gap) var(--m); background: var(--bg); }
+  .quote .cont { margin-top: 28px; font-family: var(--serif); font-size: clamp(1.5rem, 2.4vw, 2.25rem); font-weight: 500; }
+  .quote blockquote { display: grid; gap: .22em; font-family: var(--serif); font-size: clamp(2.6rem, 8.4vw, 8.4rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.02; }
+  .quote .ln { display: flex; justify-content: flex-start; gap: .28em; flex-wrap: nowrap; }
+  .quote .ln span { white-space: nowrap; }
+  .quote .who { margin-top: 36px; display: flex; justify-content: space-between; gap: 16px; font-size: 1.125rem; flex-wrap: wrap; }
+  .quote h2 { font-size: clamp(1.75rem, 3vw, 2.75rem); margin-bottom: 40px; }
+  .more { margin-top: 72px; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--m); }
+  .more p { background: var(--surface); padding: 28px 24px; font-size: 1.125rem; border-radius: 16px; }
+  .more cite { display: block; margin-top: 14px; font-style: normal; font-weight: 700; font-size: 1rem; }
+  .more cite span { font-weight: 400; color: var(--muted); }
+  .rate { margin: 0 0 48px; font-size: 1.125rem; }
+  @media (max-width: 860px) {
+    .quote blockquote { font-size: 10.5vw; }
+    .quote .cont { font-size: 1.375rem; }
+    .quote .ln { flex-direction: row; }
+    .more { grid-template-columns: 1fr; }
+  }
+
+  /* ---- 7 · вопрос по краям ---- */
+  .ask { position: relative; overflow: hidden; background: var(--tint); color: var(--ink); display: grid; justify-items: center; gap: 48px; padding: clamp(72px, 9vw, 140px) var(--m); }
+  .ask > *:not(.ask__splash) { position: relative; z-index: 1; }
+  .ask__splash { position: absolute; z-index: 0; right: -10vw; bottom: -20vw; width: 44vw; max-width: none; mix-blend-mode: multiply; pointer-events: none; transform: rotate(-12deg); }
+  .ask h2 { font-size: clamp(2.8rem, 7vw, 7rem); text-align: center; width: 100%; }
+  .ask h2 span { display: block; }
+  .ask__mid { display: grid; justify-items: center; gap: 36px; }
+  .ask__btns { display: flex; align-items: center; gap: clamp(32px, 8vw, 120px); flex-wrap: wrap; justify-content: center; }
+  .ask__or { font-size: 1.125rem; color: var(--muted); }
+  .ask__note { font-size: 1.125rem; color: var(--ink); text-align: center; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 32px; }
+  .ask__note a, .ask__note span { padding: 8px 0; }
+  @media (max-width: 860px) {
+    .ask h2 { font-size: 11vw; }
+    .ask__splash { width: 90vw; right: -36vw; bottom: -46vw; opacity: .6; }
+    .ask__btns { flex-direction: column; gap: 14px; width: 72%; }
+    .ask__btns .btn { width: 100%; }
+  }
+
+  /* ---- 8 · приглашение над обрезанным именем ---- */
+  .foot { background: var(--indigo); color: #fff; position: relative; overflow: hidden; padding: 72px var(--m) 0; }
+  .foot__top { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--m); row-gap: 28px; }
+  .foot__inv { grid-column: 1 / 8; }
+  .foot__inv h2 { font-size: clamp(2.4rem, 4.6vw, 4.6rem); margin-bottom: 32px; }
+  .foot__links { grid-column: 10 / 13; display: grid; gap: 10px; align-content: start; font-size: 1rem; }
+  .foot__links a { text-decoration: none; display: inline-block; padding: 8px 0; min-height: 44px; }
+  .foot__links a:hover { text-decoration: underline; text-underline-offset: .2em; }
+  .foot__word { margin: 0; font-family: var(--font); font-size: calc((100vw - 2 * var(--m)) / 3.02); font-weight: 800; letter-spacing: -.06em; line-height: .92; white-space: nowrap; padding-bottom: 12px; }
+  .foot__legal { align-self: end; display: flex; justify-content: space-between; gap: 16px; font-size: var(--t-xs); color: #cfc9f3; padding-bottom: 20px; position: relative; z-index: 2; flex-wrap: wrap; }
+  .foot__bottom { margin-top: 96px; }
+  @media (max-width: 860px) {
+    .foot__inv, .foot__links { grid-column: 1 / 13; }
+    .foot__inv h2 { font-size: 11vw; }
+    .foot__inv .btn { width: 100%; }
+    .foot__links { display: flex; flex-wrap: wrap; gap: 0 22px; }
+    
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .rise { opacity: 1; transform: none; transition: none; }
+    .dist__frame img { transition: none; }
+  }
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="bar__mark" href="#top">WHITE</a>
+  <nav aria-label="Разделы">
+    <a href="#o-studii">О студии</a>
+    <a href="#ceny">Цены</a>
+    <a href="#otzyvy">Отзывы</a>
+    <a class="btn btn--sm" href="tel:+79807207010">Записаться</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- 1 · Предложение разрезано рамкой; лента картинок проходит через него -->
+  <section class="hero" aria-label="Студия-мастерская WHITE">
+    <div class="hero__stage">
+      <img class="hero__splash" src="assets/splash-a.webp" alt="" aria-hidden="true" width="1200" height="1200">
+      <div class="hero__row">
+        <h1><span class="hero__half hero__half--a">Рисуем</span><span class="hero__half hero__half--b">лепим, снимаем</span></h1>
+      </div>
+      <div class="hero__reel" aria-hidden="true">
+        <img src="assets/p1.webp" alt="" width="1600" height="1073">
+        <img src="assets/p2.webp" alt="" width="1600" height="1073" loading="lazy">
+        <img src="assets/p3.webp" alt="" width="1600" height="1073" loading="lazy">
+        <img src="assets/p4.webp" alt="" width="1600" height="1073" loading="lazy">
+      </div>
+      <div class="hero__foot">
+        <p class="hero__lede">Студия-мастерская WHITE в Туле: рисование, лепка и керамика для детей от 4 лет, подростков и взрослых.</p>
+        <div class="hero__cta"><a class="btn" href="tel:+79807207010">Записаться</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · О студии -->
+  <section class="about" id="o-studii" aria-label="О студии">
+    <div class="about__facts rise">
+      <p><b>Тула</b>Красноармейский пр., 3, офис 214, 2 этаж</p>
+      <p><b>Открыто до 20:00</b>+7 (980) 720-70-10, <a class="link" href="https://t.me/studiawhite" target="_blank" rel="noopener">Telegram</a></p>
+      <p><b>Дети от 4 лет,</b>подростки и взрослые</p>
+    </div>
+    <div class="about__main">
+      <h2 class="rise">Студия WHITE и Анастасия Легась</h2>
+      <p class="about__lead rise" style="--i:1"><img src="assets/teacher.webp" alt="Рука с тонкой кистью над листом акварельной бумаги" width="700" height="700"><b>Анастасия Александровна учит рисовать детей от четырёх лет</b> и взрослых. В WHITE рисуют, лепят, обжигают керамику и снимают мультфильмы, а итоги года показывают на выставке.</p>
+      <p class="about__more rise" style="--i:2">Приглашённые мастера ведут керамику и графику. Студия ездит с детьми в музеи, а каждый год 1 июня рисует музыку вместе с ансамблем филармонии. Ученицы студии поступают в художественную школу имени Поленова, одна выпускница учится на дизайнера интерьера в академии Штиглица.</p>
+    </div>
+  </section>
+
+  <!-- 3 · Три дистанции -->
+  <section class="dist" aria-label="Что делают в студии">
+    <div class="dist__stage">
+      <img class="dist__splash" src="assets/splash-c.webp" alt="" aria-hidden="true" width="1200" height="1200" loading="lazy">
+      <div class="dist__frame"><img src="assets/dist.webp" alt="Стол студии: акварель, керамические кружки и бумажная перекладка для мультфильма" width="1400" height="1738"></div>
+      <div class="dist__text">
+        <h2 class="display">Рисунок, глина, мультфильм</h2>
+        <div class="dist__cap" aria-live="polite">
+          <p data-on><b>Рисунок и живопись.</b>Дети от 4 лет и взрослые. Акварель, гуашь, масло и графика.</p>
+          <p><b>Лепка и керамика.</b>Лепим вещь, расписываем глазурями, обжигаем в печи студии.</p>
+          <p><b>Анимация.</b>Подростки придумывают героя, рисуют и снимают мультфильм своими руками.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Один глагол за раз -->
+  <section class="verbs" aria-label="Как проходит год в студии">
+    <article class="verb verb--1">
+      <div class="verb__copy"><h2 class="display rise">Рисуем</h2><p class="rise" style="--i:1">Рисунок и живопись для детей от 4 лет. К началу учебного года студия присылает родителям список материалов: акварельная бумага А3, гуашь, кисти.</p></div>
+      <figure class="rise" style="--i:2"><img src="assets/v1.webp" alt="Детская рука с широкой кистью над акварельным листом" width="1100" height="1366" loading="lazy"></figure>
+    </article>
+    <article class="verb verb--2">
+      <div class="verb__copy"><h2 class="display rise">Лепим</h2><p class="rise" style="--i:1">Свободная лепка, полимерная глина и курс по керамике вместе с мастерской ТОЧКА: полгода, с нуля и с базой, для детей и взрослых.</p></div>
+      <figure class="rise" style="--i:2"><img src="assets/v2.webp" alt="Руки взрослого и ребёнка лепят из серой глины" width="1100" height="1366" loading="lazy"></figure>
+    </article>
+    <article class="verb verb--3">
+      <div class="verb__copy"><h2 class="display rise">Снимаем</h2><p class="rise" style="--i:1">В «Улётном лагере» на каникулах дети рисуют героев и снимают свой мультфильм.</p></div>
+      <figure class="rise" style="--i:2"><img src="assets/v3.webp" alt="Стол для покадровой анимации: фотоаппарат на штативе и бумажный персонаж" width="1100" height="1640" loading="lazy"></figure>
+    </article>
+    <article class="verb verb--4">
+      <div class="verb__copy"><h2 class="display rise">Выставляем</h2><p class="rise" style="--i:1">Итоги года показываем в арт-галерее Союза художников России. На выставке «Созидание» были и выпускные проекты курса по керамике.</p></div>
+      <figure class="rise" style="--i:2"><img src="assets/v4.webp" alt="Взрослый и ребёнок спиной к зрителю смотрят на акварели в галерее" width="1100" height="1366" loading="lazy"></figure>
+    </article>
+  </section>
+
+  <!-- 5 · Цена одним предложением -->
+  <section class="price" id="ceny" aria-label="Цены">
+    <h2 class="display rise">Лепка за 2,5 часа <span class="tag">3&nbsp;000&nbsp;₽</span></h2>
+    <div class="price__row rise" style="--i:1">
+      <div class="price__txt">
+        <p>Свободная лепка из глины для детей и взрослых. Запись обязательна: напишите или позвоните.</p>
+        <a class="btn" href="tel:+79807207010">Записаться</a>
+      </div>
+      <figure><img src="assets/p2.webp" alt="Полки мастерской с ручной керамикой, на переднем плане рука с губкой" width="1600" height="1073" loading="lazy"></figure>
+    </div>
+    <dl class="list">
+      <div class="rise"><dt>Рисуем тушью</dt><dd>Мастер-класс, 2 часа<b>2 000 ₽</b></dd></div>
+      <div class="rise" style="--i:1"><dt>Индивидуальное занятие</dt><dd>С педагогом, в своём темпе<b>1 000 ₽</b></dd></div>
+      <div class="rise" style="--i:2"><dt>Курс по керамике</dt><dd>С мастерской ТОЧКА, новый поток: набор скоро<b>уточнить</b></dd></div>
+      <div class="rise" style="--i:3"><dt>Занятия для детей, анимация, лагерь</dt><dd>Расписание и цену называем при записи, список материалов к учебному году пришлём<b>уточнить</b></dd></div>
+    </dl>
+  </section>
+
+  <!-- 6 · Отзыв по краям -->
+  <section class="quote" id="otzyvy" aria-label="Отзывы">
+    <h2 class="rise">Отзывы на Яндекс.Картах</h2>
+    <blockquote class="rise" style="--i:1">
+      <span class="ln"><span>«Дети там</span><span>хотят</span></span>
+      <span class="ln"><span>рисовать…</span></span>
+    </blockquote>
+    <p class="cont rise">…и совсем не хотят оттуда уходить.»</p>
+    <p class="who rise"><b>Дарья К</b><span>25 марта 2024</span><span>Рейтинг 4,7 · 11 отзывов</span><a class="link" href="https://yandex.ru/maps/org/white/205704090223/reviews/" target="_blank" rel="noopener">Читать все отзывы</a></p>
+    <div class="more">
+      <p class="rise">«Дочка ходит в студию к Анастасии с огромным удовольствием! В студии прекрасная творческая атмосфера, невероятно чуткий преподаватель и в целом красиво и уютно.»<cite>София Любимова <span>· 3 апреля 2025</span></cite></p>
+      <p class="rise" style="--i:1">«Девушки Анастасия и Дарья мастера организации, продуманно было всё. … Своего ребёнка доверила бы с закрытыми глазами в такие заботливые руки.»<cite>Ольга <span>· 17 марта 2025 · поездка на выставку «Передвижники»</span></cite></p>
+    </div>
+  </section>
+
+  <!-- 7 · Вопрос по краям -->
+  <section class="ask" aria-label="Записаться">
+    <img class="ask__splash" src="assets/splash-b.webp" alt="" aria-hidden="true" width="1200" height="1200" loading="lazy">
+    <h2 class="display"><span>Занятие или</span><span>мастер-класс?</span></h2>
+    <div class="ask__mid">
+      <div class="ask__btns">
+        <a class="btn" href="tel:+79807207010">Записаться на занятие</a>
+        <span class="ask__or">или</span>
+        <a class="btn btn--ink" href="tel:+79807207010">На мастер-класс</a>
+      </div>
+      <p class="ask__note"><a href="tel:+79807207010">+7 (980) 720-70-10</a><a href="https://t.me/studiawhite" target="_blank" rel="noopener">Telegram: @studiawhite</a><span>Красноармейский пр., 3, офис 214</span></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" aria-label="Контакты">
+  <div class="foot__top">
+    <div class="foot__inv">
+      <h2 class="display">Приходите рисовать</h2>
+      <a class="btn btn--cyan" href="tel:+79807207010">+7 (980) 720-70-10</a>
+    </div>
+    <div class="foot__links">
+      <a href="https://t.me/studiawhite" target="_blank" rel="noopener">Telegram: @studiawhite</a>
+      <a href="https://yandex.ru/maps/org/white/205704090223/" target="_blank" rel="noopener">Яндекс.Карты</a>
+      <a href="tel:+79807207010">Позвонить</a>
+    </div>
+  </div>
+  <div class="foot__bottom">
+    <p class="foot__legal"><span>Красноармейский пр., 3, офис 214, Тула</span><span>Студия-мастерская WHITE · открыто до 20:00</span></p>
+    <p class="foot__word display" aria-hidden="true">WHITE</p>
+  </div>
+</footer>
+
+<script>
+  document.documentElement.classList.add('js');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // появление частей секций, один раз
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0, rootMargin: "0px 0px -4% 0px" });
+  document.querySelectorAll('.rise').forEach(function (n) { io.observe(n); });
+
+  // прогресс закреплённых сцен
+  function prog(el) {
+    var r = el.getBoundingClientRect(), h = el.offsetHeight - innerHeight;
+    return Math.min(1, Math.max(0, -r.top / h));
+  }
+  var hero = document.querySelector('.hero'), dist = document.querySelector('.dist');
+  var caps = dist.querySelectorAll('.dist__cap p'), img = dist.querySelector('.dist__frame img');
+  var stages = [{ s: 1, x: '50%', y: '50%' }, { s: 2, x: '62%', y: '50%' }, { s: 2.8, x: '82%', y: '88%' }];
+  var cur = -1;
+  var wide = matchMedia('(min-width: 861px)'), reelImgs = hero.querySelectorAll('.hero__reel img');
+  function tick() {
+    var hp = reduce ? 0 : prog(hero); hero.querySelector('.hero__stage').style.setProperty('--p', hp.toFixed(4)); hero.querySelector('.hero__reel').setAttribute('data-i', Math.min(3, Math.round(hp * 3)));
+    if (wide.matches) reelImgs.forEach(function (im, i) { im.style.opacity = Math.max(0, 1 - Math.abs(i - hp * 3) * 1.4).toFixed(3); });
+    var p = prog(dist), k = p < 0.33 ? 0 : p < 0.66 ? 1 : 2;
+    if (k !== cur) {
+      cur = k;
+      img.style.setProperty('--s', reduce ? 1 : stages[k].s);
+      img.style.setProperty('--ox', stages[k].x); img.style.setProperty('--oy', stages[k].y);
+      caps.forEach(function (c, i) { if (i === k) c.setAttribute('data-on', ''); else c.removeAttribute('data-on'); });
+    }
+  }
+  var bar = document.querySelector('.bar'), ly = 0;
+  addEventListener('scroll', function () {
+    var y = scrollY; bar.classList.toggle('hide', y > ly && y > 240); ly = y;
+    requestAnimationFrame(tick);
+  }, { passive: true });
+  addEventListener('resize', tick);
+  tick();
+</script>
+</body>
+</html>
